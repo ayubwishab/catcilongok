@@ -65,7 +65,7 @@
     <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-blue-600/15 blur-[140px] rounded-full pointer-events-none"></div>
     <div class="max-w-7xl mx-auto text-center space-y-6 relative z-10">
       <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
-        ✨ Toko Cat Nazar Paint Cilongok - Katalog Resmi 2023
+        ✨ Toko Cat Nazar Paint Cilongok - Katalog Resmi
       </span>
       <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
         Rangkaian Warna Menawan <br>Untuk <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Keindahan Rumah Anda</span>
@@ -99,7 +99,7 @@
           <h3 class="text-xl font-bold text-white">Cat Standar</h3>
         </div>
         <p class="text-slate-400 text-xs leading-relaxed">Pilihan tepat pelapisan dinding interior sehari-hari dengan daya tutup baik dan harga ekonomis.</p>
-        <button onclick="filterColor('Standar')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Standar</button>
+        <button onclick="setActiveCategory('Standar')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Standar</button>
       </div>
 
       <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4">
@@ -109,7 +109,7 @@
           <h3 class="text-xl font-bold text-white">Cat Pro</h3>
         </div>
         <p class="text-slate-400 text-xs leading-relaxed">Formulasi spesifikasi profesional, daya tutup ekstra pekat, halus, dan cocok untuk interior/eksterior.</p>
-        <button onclick="filterColor('Pro')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Pro</button>
+        <button onclick="setActiveCategory('Pro')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Pro</button>
       </div>
 
       <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4">
@@ -119,7 +119,7 @@
           <h3 class="text-xl font-bold text-white">Cat Super</h3>
         </div>
         <p class="text-slate-400 text-xs leading-relaxed">Daya rekat tinggi, pigment khusus anti-jamur & anti-lumut untuk warna tahan lama dan tidak mudah pudar.</p>
-        <button onclick="filterColor('Super')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Super</button>
+        <button onclick="setActiveCategory('Super')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Super</button>
       </div>
 
       <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4">
@@ -129,7 +129,7 @@
           <h3 class="text-xl font-bold text-white">Multi Gloss</h3>
         </div>
         <p class="text-slate-400 text-xs leading-relaxed">Hasil akhir mengkilat (glossy), licin, tahan air, dan noda kotoran sangat mudah dibersihkan.</p>
-        <button onclick="filterColor('Multi Gloss')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Multi Gloss</button>
+        <button onclick="setActiveCategory('Multi Gloss')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">Filter Warna Multi Gloss</button>
       </div>
     </div>
   </section>
@@ -145,12 +145,15 @@
             <h2 class="text-xl font-extrabold text-white">Swatches Katalog Resmi</h2>
             <p class="text-slate-400 text-xs">Klik warna untuk mencoba langsung di simulator dinding</p>
           </div>
-          <div class="flex flex-wrap gap-1.5 text-xs">
-            <button onclick="filterColor('Semua')" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium">Semua</button>
-            <button onclick="filterColor('Standar')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Standar</button>
-            <button onclick="filterColor('Pro')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Pro</button>
-            <button onclick="filterColor('Super')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Super</button>
-            <button onclick="filterColor('Multi Gloss')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Multi Gloss</button>
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <input type="text" id="searchInput" oninput="filterColor()" placeholder="Cari warna (misal: Putih Tulang / 528)..." class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-white focus:outline-none focus:border-blue-500 w-full sm:w-auto">
+            <div class="flex flex-wrap gap-1">
+              <button onclick="setActiveCategory('Semua')" class="cat-btn px-2.5 py-1.5 rounded-lg bg-blue-600 text-white font-medium">Semua</button>
+              <button onclick="setActiveCategory('Standar')" class="cat-btn px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Standar</button>
+              <button onclick="setActiveCategory('Pro')" class="cat-btn px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Pro</button>
+              <button onclick="setActiveCategory('Super')" class="cat-btn px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Super</button>
+              <button onclick="setActiveCategory('Multi Gloss')" class="cat-btn px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Multi Gloss</button>
+            </div>
           </div>
         </div>
 
@@ -273,7 +276,7 @@
           <div>
             <h3 class="font-bold text-white text-base mb-2">Jam Layanan Toko</h3>
             <div class="text-xs text-slate-400 space-y-1">
-              <p>• Senin - Sabtu: 08:00 - 18:00 WIB</p>
+              <p>• Senin - Sabtu: 08:00 - 17:00 WIB</p>
               <p>• Minggu & Libur: Buka (Konfirmasi WA)</p>
             </div>
           </div>
@@ -292,10 +295,8 @@
   </footer>
 
   <script>
-    // Set Tahun Dinamis
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Data Warna Resmi Katalog PDF
     const colorsData = [
       // Standar
       { code: "101", name: "Cream", category: "Standar", hex: "#FEF08A" },
@@ -448,9 +449,27 @@
     const selectedCode = document.getElementById('selectedCode');
     const orderBtn = document.getElementById('orderBtn');
 
-    function renderColors(filter = 'Semua') {
+    let currentCategory = 'Semua';
+
+    function setActiveCategory(cat) {
+      currentCategory = cat;
+      filterColor();
+    }
+
+    function filterColor() {
+      const keyword = document.getElementById('searchInput').value.toLowerCase();
       colorGrid.innerHTML = '';
-      const filtered = filter === 'Semua' ? colorsData : colorsData.filter(c => c.category === filter);
+      
+      const filtered = colorsData.filter(c => {
+        const matchCategory = (currentCategory === 'Semua' || c.category === currentCategory);
+        const matchKeyword = c.name.toLowerCase().includes(keyword) || c.code.toLowerCase().includes(keyword);
+        return matchCategory && matchKeyword;
+      });
+
+      if (filtered.length === 0) {
+        colorGrid.innerHTML = `<div class="col-span-full text-center py-8 text-slate-500 text-xs">Warna tidak ditemukan</div>`;
+        return;
+      }
       
       filtered.forEach((c) => {
         const card = document.createElement('div');
@@ -479,11 +498,6 @@
       orderBtn.href = `https://wa.me/6281380842231?text=Halo%20Toko%20Cat%20Nazar%20Paint%20Cilongok,%20saya%20ingin%20pesan%20cat%20${encodeURIComponent(c.category)}%20kode%20${encodeURIComponent(c.code)}%20${encodeURIComponent(c.name)}`;
     }
 
-    function filterColor(cat) {
-      renderColors(cat);
-    }
-
-    // Kalkulator Mengikuti Prosedur Cat Kiloan Nazar Paint (+1 Gelas Air/Kg)
     function calculatePaint() {
       const l = parseFloat(document.getElementById('calcLength').value) || 0;
       const h = parseFloat(document.getElementById('calcHeight').value) || 0;
@@ -492,7 +506,6 @@
       const area = l * h;
       const totalAreaToCover = area * coats;
       
-      // 1 Kg Cat + 1 Gelas Air (250ml) melapisi ~8 m² per lapis
       const kgNeeded = Math.ceil(totalAreaToCover / 8); 
       const waterCupsNeeded = kgNeeded; 
 
@@ -515,7 +528,7 @@
       document.getElementById('resCans').textContent = canSuggestion;
     }
 
-    renderColors();
+    filterColor();
     calculatePaint();
   </script>
 </body>
