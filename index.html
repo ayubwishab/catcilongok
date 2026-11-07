@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nazar-paint/catalog-official: Katalog Resmi Nazar Paint</title>
+  <title>Nazar Paint - Solusi Cat Dinding High-Quality</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
           colors: {
-            gh: {
-              bg: '#0d1117',
-              header: '#161b22',
-              border: '#30363d',
-              text: '#c9d1d9',
-              subtext: '#8b949e',
-              blue: '#58a6ff',
-              green: '#238636',
-              greenHover: '#2ea043',
-              card: '#161b22',
-              hover: '#21262d'
+            brand: {
+              50: '#f0f7ff',
+              500: '#0066ff',
+              600: '#0052cc',
+              900: '#001a4d',
             }
           }
         }
@@ -28,282 +28,307 @@
     }
   </script>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
     .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
-    .custom-scrollbar::-webkit-scrollbar-track { background: #0d1117; }
-    .custom-scrollbar::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #0b0f19; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    .glow-effect {
+      box-shadow: 0 0 25px -5px rgba(0, 102, 255, 0.3);
+    }
   </style>
 </head>
-<body class="bg-gh-bg text-gh-text min-h-screen">
+<body class="bg-[#0b0f19] text-slate-200 min-h-screen selection:bg-blue-500 selection:text-white">
 
-  <!-- Header GitHub Top Nav -->
-  <header class="bg-gh-header border-b border-gh-border px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center space-x-3">
-      <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 16 16" version="1.1">
-        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-      </svg>
-      <span class="font-semibold text-white">nazar-paint</span>
-      <span class="text-gh-subtext">/</span>
-      <span class="font-semibold text-gh-blue">catalog-official</span>
-      <span class="text-xs bg-gh-border text-gh-subtext px-2 py-0.5 rounded-full border border-gh-border">Public</span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <a href="https://wa.me/6281380842231" target="_blank" class="bg-gh-green hover:bg-gh-greenHover text-white text-xs px-3 py-1.5 rounded-md font-medium flex items-center space-x-1 transition">
-        <span>💬 Order WA</span>
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 glass-card border-b border-slate-800/60 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-blue-500/30">
+          N
+        </div>
+        <div>
+          <span class="text-xl font-extrabold text-white tracking-wide">NAZAR <span class="text-blue-500">PAINT</span></span>
+          <span class="block text-[10px] text-slate-400 font-medium tracking-widest uppercase">Premium Paint Coatings</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#kategori" class="hover:text-blue-400 transition">Kategori Cat</a>
+        <a href="#katalog" class="hover:text-blue-400 transition">Katalog Warna</a>
+        <a href="#visualizer" class="hover:text-blue-400 transition">Visualizer</a>
+        <a href="#kalkulator" class="hover:text-blue-400 transition">Kalkulator</a>
+        <a href="#lokasi" class="hover:text-blue-400 transition">Toko & Lokasi</a>
+      </nav>
+
+      <a href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20tanya%20produk%20cat" target="_blank" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white text-xs md:text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/20 transition flex items-center space-x-2">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.705 1.754zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span>Hubungi WA (+62 813-8084-2231)</span>
       </a>
     </div>
   </header>
 
-  <!-- Repo Navigation Tabs -->
-  <div class="bg-gh-header border-b border-gh-border px-4 pt-2">
-    <div class="flex space-x-6 text-sm">
-      <button class="flex items-center space-x-2 pb-3 border-b-2 border-orange-500 font-semibold text-white">
-        <span>📄 Code</span>
-      </button>
-      <button class="flex items-center space-x-2 pb-3 text-gh-subtext hover:text-gh-text">
-        <span>🎨 Katalog Warna</span>
-      </button>
-      <button class="flex items-center space-x-2 pb-3 text-gh-subtext hover:text-gh-text">
-        <span>⭐ Kategori Produk</span>
-      </button>
-      <button class="flex items-center space-x-2 pb-3 text-gh-subtext hover:text-gh-text">
-        <span>📍 Lokasi Toko</span>
-      </button>
-    </div>
-  </div>
-
-  <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
-
-    <!-- Hero / Main Banner -->
-    <div class="border border-gh-border bg-gh-card rounded-md p-6 relative overflow-hidden">
-      <div class="max-w-2xl">
-        <h1 class="text-3xl font-bold text-white mb-2">🎨 Nazar Paint Official Catalog</h1>
-        <p class="text-gh-subtext mb-4">
-          Penyedia cat berkualitas tinggi untuk segala kebutuhan interior & eksterior. Tersedia dalam varian <strong>Standar</strong>, <strong>Super</strong>, <strong>Pro</strong>, dan <strong>Multi Gloss</strong>.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20tanya%20produk%20cat" target="_blank" class="bg-gh-green hover:bg-gh-greenHover text-white px-4 py-2 rounded-md font-semibold text-sm flex items-center space-x-2">
-            <span>📲 Konsultasi & Pemesanan WA (+62 813-8084-2231)</span>
-          </a>
-          <a href="https://maps.app.goo.gl/XqgvTJuzGKFaVB6YA" target="_blank" class="bg-gh-hover hover:bg-gh-border text-gh-blue border border-gh-border px-4 py-2 rounded-md font-semibold text-sm flex items-center space-x-2">
-            <span>📍 Petunjuk Arah Toko (Google Maps)</span>
-          </a>
-        </div>
+  <!-- Hero Section -->
+  <section class="relative py-20 px-6 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/15 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto text-center space-y-6 relative z-10">
+      <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+        ✨ Solusi Warna & Pelapis Dinding Terbaik
+      </span>
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
+        Keindahan Warna Tahan Lama <br>Untuk <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-teal-400 bg-clip-text text-transparent">Bangunan Impian Anda</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-slate-400 text-base md:text-lg">
+        Tersedia pilihan racikan warna akurat dengan kualitas <strong>Standar</strong>, <strong>Super</strong>, <strong>Pro</strong>, hingga <strong>Multi Gloss</strong>.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="#katalog" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-xl shadow-blue-600/30 transition">
+          Jelajahi Warna
+        </a>
+        <a href="https://maps.app.goo.gl/XqgvTJuzGKFaVB6YA" target="_blank" class="glass-card hover:border-slate-600 text-slate-200 font-bold px-7 py-3.5 rounded-xl transition flex items-center space-x-2">
+          <span>📍 Petunjuk Arah Toko</span>
+        </a>
       </div>
     </div>
+  </section>
 
-    <!-- Kategori Kualitas Cat -->
-    <section>
-      <h2 class="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-        <span>🏷️ Kategori Kualitas Cat</span>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        
-        <!-- Standar -->
-        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-bold text-white text-lg">Cat Standar</h3>
-            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded border border-gray-700">Ekonomis</span>
-          </div>
-          <p class="text-gh-subtext text-xs mb-3">Cat dinding pilihan tepat untuk kebutuhan pelapisan harian dengan harga terjangkau dan daya tutup baik.</p>
-          <ul class="text-xs text-gh-text space-y-1 mb-4">
-            <li>✓ Cocok untuk tembok interior</li>
-            <li>✓ Aplikasi mudah & cepat kering</li>
-            <li>✓ Pilihan warna beragam</li>
-          </ul>
-          <button onclick="filterColor('Standar')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Standar</button>
-        </div>
+  <!-- Kategori Kualitas Cat -->
+  <section id="kategori" class="py-16 px-6 max-w-7xl mx-auto space-y-8">
+    <div class="text-center space-y-2">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white">Varian Kualitas Cat</h2>
+      <p class="text-slate-400 text-sm">Sesuaikan pilihan jenis cat dengan kebutuhan renovasi ruangan Anda</p>
+    </div>
 
-        <!-- Super -->
-        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-bold text-white text-lg">Cat Super</h3>
-            <span class="text-xs bg-blue-950 text-blue-300 px-2 py-0.5 rounded border border-blue-800">Perlindungan Plus</span>
-          </div>
-          <p class="text-gh-subtext text-xs mb-3">Formulasi ditingkatkan dengan ketahanan ekstra, anti-jamur, dan warna yang lebih tahan lama.</p>
-          <ul class="text-xs text-gh-text space-y-1 mb-4">
-            <li>✓ Daya rekat & tutup tinggi</li>
-            <li>✓ Formula anti-jamur & lumut</li>
-            <li>✓ Warna cerah & tidak mudah pudar</li>
-          </ul>
-          <button onclick="filterColor('Super')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Super</button>
-        </div>
-
-        <!-- Pro -->
-        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-bold text-white text-lg">Cat Pro</h3>
-            <span class="text-xs bg-purple-950 text-purple-300 px-2 py-0.5 rounded border border-purple-800">Profesional</span>
-          </div>
-          <p class="text-gh-subtext text-xs mb-3">Kualitas spesifikasi profesional untuk hasil akhir paling halus, pekat, dan ketahanan jangka panjang.</p>
-          <ul class="text-xs text-gh-text space-y-1 mb-4">
-            <li>✓ Hasil akhir super halus & merata</li>
-            <li>✓ Bisa disikat / mudah dibersihkan</li>
-            <li>✓ Cocok untuk eksterior & interior</li>
-          </ul>
-          <button onclick="filterColor('Pro')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Pro</button>
-        </div>
-
-        <!-- Multi Gloss -->
-        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="font-bold text-white text-lg">Multi Gloss</h3>
-            <span class="text-xs bg-amber-950 text-amber-300 px-2 py-0.5 rounded border border-amber-800">Mengkilap & Serbaguna</span>
-          </div>
-          <p class="text-gh-subtext text-xs mb-3">Cat serbaguna dengan hasil akhir kilap (glossy), tahan air, licin, dan sangat mudah dilap jika kotor.</p>
-          <ul class="text-xs text-gh-text space-y-1 mb-4">
-            <li>✓ Hasil kilap & tahan air (waterproof)</li>
-            <li>✓ Serbaguna untuk tembok, lis, dll.</li>
-            <li>✓ Permukaan licin, noda mudah dilap</li>
-          </ul>
-          <button onclick="filterColor('Multi Gloss')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Multi Gloss</button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Katalog Warna & Visualizer Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <!-- Kolom Swatch Warna -->
-      <div class="lg:col-span-2 border border-gh-border bg-gh-card rounded-md p-4 space-y-4">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gh-border pb-3">
-          <h2 class="text-lg font-semibold text-white">🎨 Katalog Swatch Warna</h2>
-          <div class="flex items-center space-x-1 text-xs">
-            <button onclick="filterColor('Semua')" class="px-2.5 py-1 rounded bg-gh-border text-white">Semua</button>
-            <button onclick="filterColor('Standar')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Standar</button>
-            <button onclick="filterColor('Super')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Super</button>
-            <button onclick="filterColor('Pro')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Pro</button>
-            <button onclick="filterColor('Multi Gloss')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Multi Gloss</button>
+      <!-- Standar -->
+      <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 font-bold">
+          STD
+        </div>
+        <div>
+          <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Ekonomis</span>
+          <h3 class="text-xl font-bold text-white">Cat Standar</h3>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed">Solusi praktis dan efisien untuk pelapisan dinding interior sehari-hari dengan daya tutup merata.</p>
+        <button onclick="filterColor('Standar')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">
+          Pilih Standar
+        </button>
+      </div>
+
+      <!-- Super -->
+      <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4 relative overflow-hidden">
+        <div class="w-12 h-12 rounded-xl bg-blue-950/80 border border-blue-800 flex items-center justify-center text-blue-400 font-bold">
+          SPR
+        </div>
+        <div>
+          <span class="text-[10px] uppercase font-bold text-blue-400 tracking-wider">Perlindungan Plus</span>
+          <h3 class="text-xl font-bold text-white">Cat Super</h3>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed">Daya rekat lebih kuat, dilengkapi formula anti-jamur & anti-lumut untuk warna lebih segar tahan lama.</p>
+        <button onclick="filterColor('Super')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">
+          Pilih Super
+        </button>
+      </div>
+
+      <!-- Pro -->
+      <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-purple-950/80 border border-purple-800 flex items-center justify-center text-purple-400 font-bold">
+          PRO
+        </div>
+        <div>
+          <span class="text-[10px] uppercase font-bold text-purple-400 tracking-wider">Spesifikasi Profesional</span>
+          <h3 class="text-xl font-bold text-white">Cat Pro</h3>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed">Formulasi tingkat tinggi untuk daya perataan sempurna, halus, tahan sikat, dan tahan cuaca eksterior.</p>
+        <button onclick="filterColor('Pro')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">
+          Pilih Pro
+        </button>
+      </div>
+
+      <!-- Multi Gloss -->
+      <div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition duration-300 space-y-4">
+        <div class="w-12 h-12 rounded-xl bg-amber-950/80 border border-amber-800 flex items-center justify-center text-amber-400 font-bold">
+          GLS
+        </div>
+        <div>
+          <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">Mengkilap & Serbaguna</span>
+          <h3 class="text-xl font-bold text-white">Multi Gloss</h3>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed">Hasil akhir kilat (glossy), sangat tahan air (waterproof), licin, dan noda kotoran sangat mudah diusap.</p>
+        <button onclick="filterColor('Multi Gloss')" class="w-full bg-slate-800/80 hover:bg-slate-700 text-blue-400 py-2.5 rounded-xl text-xs font-semibold border border-slate-700 transition">
+          Pilih Multi Gloss
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Katalog & Interactive Visualizer -->
+  <section id="katalog" class="py-16 px-6 max-w-7xl mx-auto space-y-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Swatch Catalog -->
+      <div class="lg:col-span-2 glass-card p-6 rounded-2xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <h2 class="text-xl font-extrabold text-white">Katalog Swatch Warna</h2>
+            <p class="text-slate-400 text-xs">Klik warna untuk menguji langsung di simulator ruangan</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <button onclick="filterColor('Semua')" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-medium">Semua</button>
+            <button onclick="filterColor('Standar')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Standar</button>
+            <button onclick="filterColor('Super')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Super</button>
+            <button onclick="filterColor('Pro')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Pro</button>
+            <button onclick="filterColor('Multi Gloss')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Multi Gloss</button>
           </div>
         </div>
 
-        <div id="colorGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-96 overflow-y-auto custom-scrollbar pr-1">
-          <!-- Item Swatch Warna (Dapat diklik) -->
+        <div id="colorGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-h-[420px] overflow-y-auto custom-scrollbar pr-1">
+          <!-- Swatches rendered by JS -->
         </div>
       </div>
 
-      <!-- Kolom Interactive Room Visualizer -->
-      <div class="border border-gh-border bg-gh-card rounded-md p-4 flex flex-col justify-between">
+      <!-- Simulator Ruangan -->
+      <div id="visualizer" class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-6">
         <div>
-          <h2 class="text-lg font-semibold text-white mb-2">👁️ Visualizer Ruangan</h2>
-          <p class="text-xs text-gh-subtext mb-4">Klik salah satu swatch warna di samping untuk menguji langsung warnanya pada dinding ruangan.</p>
+          <div class="mb-4">
+            <h2 class="text-xl font-extrabold text-white">Visualizer Dinding</h2>
+            <p class="text-slate-400 text-xs">Simulasi tampilan warna cat di dalam ruangan</p>
+          </div>
 
-          <!-- Previsu Dinding Room (SVG) -->
-          <div class="relative w-full h-48 rounded-md overflow-hidden border border-gh-border flex items-center justify-center bg-gray-950">
+          <!-- SVG Visualizer -->
+          <div class="relative w-full h-52 rounded-xl overflow-hidden border border-slate-700 bg-slate-950 shadow-inner">
             <svg class="w-full h-full" viewBox="0 0 300 200" fill="none">
-              <!-- Dinding belakang (Warna yang disimulasikan) -->
-              <rect id="wallPreview" x="30" y="20" width="240" height="130" fill="#E2E8F0" class="transition-colors duration-300" />
-              <!-- Lantai -->
-              <polygon points="0,200 30,150 270,150 300,200" fill="#332922" />
-              <!-- Garis Sudut Ruangan -->
-              <line x1="0" y1="0" x2="30" y2="20" stroke="#000000" stroke-opacity="0.3" stroke-width="2"/>
-              <line x1="300" y1="0" x2="270" y2="20" stroke="#000000" stroke-opacity="0.3" stroke-width="2"/>
-              <line x1="30" y1="20" x2="30" y2="150" stroke="#000000" stroke-opacity="0.2" stroke-width="2"/>
-              <line x1="270" y1="20" x2="270" y2="150" stroke="#000000" stroke-opacity="0.2" stroke-width="2"/>
-              <line x1="30" y1="150" x2="270" y2="150" stroke="#000000" stroke-opacity="0.4" stroke-width="2"/>
-              <!-- Pigura Foto / Dekorasi -->
-              <rect x="110" y="45" width="80" height="50" fill="#1E293B" rx="2" stroke="#FFFFFF" stroke-width="2"/>
-              <circle cx="150" cy="70" r="12" fill="#38BDF8"/>
-              <!-- Sofa sederhana -->
-              <rect x="80" y="125" width="140" height="30" rx="4" fill="#475569" />
-              <rect x="75" y="120" width="20" height="35" rx="3" fill="#334155" />
-              <rect x="205" y="120" width="20" height="35" rx="3" fill="#334155" />
+              <!-- Wall -->
+              <rect id="wallPreview" x="30" y="20" width="240" height="130" fill="#F8FAFC" class="transition-colors duration-500" />
+              <!-- Floor -->
+              <polygon points="0,200 30,150 270,150 300,200" fill="#1e1815" />
+              <!-- Room Perspective Lines -->
+              <line x1="0" y1="0" x2="30" y2="20" stroke="#000" stroke-opacity="0.3" stroke-width="2"/>
+              <line x1="300" y1="0" x2="270" y2="20" stroke="#000" stroke-opacity="0.3" stroke-width="2"/>
+              <line x1="30" y1="20" x2="30" y2="150" stroke="#000" stroke-opacity="0.15" stroke-width="2"/>
+              <line x1="270" y1="20" x2="270" y2="150" stroke="#000" stroke-opacity="0.15" stroke-width="2"/>
+              <!-- Wall Frame -->
+              <rect x="115" y="40" width="70" height="45" fill="#0f172a" rx="2" stroke="#ffffff" stroke-width="2"/>
+              <circle cx="150" cy="62" r="10" fill="#38bdf8"/>
+              <!-- Sofa -->
+              <rect x="80" y="120" width="140" height="32" rx="4" fill="#334155" />
+              <rect x="75" y="115" width="22" height="37" rx="3" fill="#1e293b" />
+              <rect x="203" y="115" width="22" height="37" rx="3" fill="#1e293b" />
             </svg>
           </div>
 
-          <div class="mt-4 p-3 bg-gh-bg border border-gh-border rounded text-xs space-y-1">
-            <div class="text-gh-subtext">Warna Terpilih:</div>
-            <div id="selectedColorName" class="font-bold text-white text-sm">Pure White</div>
-            <div class="flex items-center justify-between text-gh-subtext">
-              <span>Kategori: <strong id="selectedCategory" class="text-gh-blue">Standar</strong></span>
-              <span id="selectedHex" class="font-mono bg-gh-border px-1.5 py-0.5 rounded text-white">#F8FAFC</span>
+          <!-- Color Detail Badge -->
+          <div class="mt-4 p-4 bg-slate-900/90 rounded-xl border border-slate-800 space-y-1 text-xs">
+            <span class="text-slate-400">Pilihan Aktif:</span>
+            <div id="selectedColorName" class="text-base font-bold text-white">Pure White</div>
+            <div class="flex items-center justify-between text-slate-400 pt-1">
+              <span>Kategori: <strong id="selectedCategory" class="text-blue-400">Standar</strong></span>
+              <span id="selectedHex" class="font-mono bg-slate-800 px-2 py-0.5 rounded text-slate-200">#F8FAFC</span>
             </div>
           </div>
         </div>
 
-        <a id="orderBtn" href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20pesan%20warna%20Pure%20White" target="_blank" class="w-full mt-4 bg-gh-green hover:bg-gh-greenHover text-white py-2 rounded font-semibold text-xs text-center block transition">
+        <a id="orderBtn" href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20pesan%20warna%20Pure%20White" target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-3 rounded-xl text-xs text-center transition shadow-lg shadow-emerald-500/20">
           Pesan Warna Ini via WhatsApp
         </a>
       </div>
 
     </div>
+  </section>
 
-    <!-- Kalkulator Cat -->
-    <section class="border border-gh-border bg-gh-card rounded-md p-5">
-      <h2 class="text-lg font-semibold text-white mb-2">🧮 Kalkulator Kebutuhan Cat</h2>
-      <p class="text-xs text-gh-subtext mb-4">Hitung estimasi kebutuhan kaleng/pail cat berdasarkan ukuran dinding ruangan Anda.</p>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4 text-xs">
-        <div>
-          <label class="block text-gh-subtext mb-1">Panjang Total Dinding (m)</label>
-          <input type="number" id="calcLength" value="10" min="1" oninput="calculatePaint()" class="w-full bg-gh-bg border border-gh-border rounded p-2 text-white font-mono focus:outline-none focus:border-gh-blue">
+  <!-- Kalkulator Cat -->
+  <section id="kalkulator" class="py-16 px-6 max-w-7xl mx-auto">
+    <div class="glass-card p-6 md:p-8 rounded-2xl space-y-6">
+      <div>
+        <h2 class="text-2xl font-extrabold text-white">🧮 Estimator Kebutuhan Cat</h2>
+        <p class="text-slate-400 text-xs">Hitung taksiran kebutuhan volume cat sesuai luas area dinding ruangan Anda</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        <div class="space-y-1.5">
+          <label class="block text-slate-300 font-medium">Panjang Total Dinding (m)</label>
+          <input type="number" id="calcLength" value="10" min="1" oninput="calculatePaint()" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white font-mono focus:outline-none focus:border-blue-500">
         </div>
-        <div>
-          <label class="block text-gh-subtext mb-1">Tinggi Tembok (m)</label>
-          <input type="number" id="calcHeight" value="3" min="1" oninput="calculatePaint()" class="w-full bg-gh-bg border border-gh-border rounded p-2 text-white font-mono focus:outline-none focus:border-gh-blue">
+        <div class="space-y-1.5">
+          <label class="block text-slate-300 font-medium">Tinggi Tembok (m)</label>
+          <input type="number" id="calcHeight" value="3" min="1" oninput="calculatePaint()" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white font-mono focus:outline-none focus:border-blue-500">
         </div>
-        <div>
-          <label class="block text-gh-subtext mb-1">Jumlah Lapis Cat</label>
-          <select id="calcCoats" onchange="calculatePaint()" class="w-full bg-gh-bg border border-gh-border rounded p-2 text-white focus:outline-none focus:border-gh-blue">
-            <option value="2" selected>2 Lapis (Disarankan)</option>
+        <div class="space-y-1.5">
+          <label class="block text-slate-300 font-medium">Jumlah Pelapisan</label>
+          <select id="calcCoats" onchange="calculatePaint()" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-blue-500">
+            <option value="2" selected>2 Lapis (Sangat Direkomendasikan)</option>
             <option value="1">1 Lapis</option>
             <option value="3">3 Lapis</option>
           </select>
         </div>
       </div>
 
-      <div class="p-4 bg-gh-bg border border-gh-border rounded flex flex-col sm:flex-row items-center justify-between text-xs space-y-2 sm:space-y-0">
+      <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center sm:text-left text-xs">
         <div>
-          <span class="text-gh-subtext">Luas Dinding: </span>
-          <strong id="resArea" class="text-white font-mono text-sm">30.0 m²</strong>
+          <span class="text-slate-400">Luas Dinding:</span>
+          <div id="resArea" class="text-lg font-bold text-white font-mono mt-0.5">30.0 m²</div>
         </div>
         <div>
-          <span class="text-gh-subtext">Estimasi Cat Dibutuhkan: </span>
-          <strong id="resLiters" class="text-gh-blue font-mono text-sm">~5.0 Kg / Liter</strong>
+          <span class="text-slate-400">Estimasi Total Cat:</span>
+          <div id="resLiters" class="text-lg font-bold text-blue-400 font-mono mt-0.5">~5.0 Kg / Liter</div>
         </div>
         <div>
-          <span class="text-gh-subtext">Perkiraan Kemasan: </span>
-          <strong id="resCans" class="text-white font-mono text-sm">2 Galon (2.5 Kg) / 1 Pail</strong>
+          <span class="text-slate-400">Rekomendasi Kemasan:</span>
+          <div id="resCans" class="text-lg font-bold text-emerald-400 font-mono mt-0.5">2 Galon (2.5 Kg)</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Informasi Lokasi Toko & Kontak -->
-    <section class="border border-gh-border bg-gh-card rounded-md p-5 space-y-4">
-      <h2 class="text-lg font-semibold text-white">📍 Lokasi Toko & Kontak Resmi</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-        <div class="space-y-2 bg-gh-bg p-4 rounded border border-gh-border">
-          <h3 class="font-bold text-white text-sm">Toko Nazar Paint</h3>
-          <p class="text-gh-subtext">Siap melayani pembelian eceran & partai besar, konsultasi racikan warna, dan kebutuhan renovasi rumah Anda.</p>
-          <div class="text-gh-text space-y-1">
-            <p><strong>📞 WA / Telepon:</strong> <a href="https://wa.me/6281380842231" target="_blank" class="text-gh-blue hover:underline">+62 813-8084-2231</a></p>
-            <p><strong>🗺️ Google Maps:</strong> <a href="https://maps.app.goo.gl/XqgvTJuzGKFaVB6YA" target="_blank" class="text-gh-blue hover:underline">Lihat Petunjuk Arah Toko</a></p>
+  <!-- Lokasi & Kontak -->
+  <section id="lokasi" class="py-16 px-6 max-w-7xl mx-auto">
+    <div class="glass-card p-6 md:p-8 rounded-2xl space-y-6">
+      <h2 class="text-2xl font-extrabold text-white">📍 Kontak & Lokasi Toko Nazar Paint</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+        <div class="space-y-4 bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+          <h3 class="font-bold text-white text-base">Toko Nazar Paint Official</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Melayani penjualan cat dinding eceran & partai besar, konsultasi pilihan warna gratis, serta kebutuhan pelapis anti bocor.</p>
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center space-x-2 text-slate-300">
+              <span>📞 WA / Telepon:</span>
+              <a href="https://wa.me/6281380842231" target="_blank" class="text-blue-400 font-semibold hover:underline">+62 813-8084-2231</a>
+            </div>
+            <div class="flex items-center space-x-2 text-slate-300">
+              <span>🗺️ Google Maps:</span>
+              <a href="https://maps.app.goo.gl/XqgvTJuzGKFaVB6YA" target="_blank" class="text-blue-400 font-semibold hover:underline">Buka Peta Lokasi Toko</a>
+            </div>
           </div>
         </div>
 
-        <div class="bg-gh-bg p-4 rounded border border-gh-border flex flex-col justify-between space-y-3">
+        <div class="space-y-4 bg-slate-900/60 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div>
-            <h3 class="font-bold text-white text-sm mb-1">Jam Operasional Toko</h3>
-            <p class="text-gh-subtext">Senin - Sabtu: 08:00 - 17:00 WIB</p>
-            <p class="text-gh-subtext">Minggu / Hari Libur: Buka (Konfirmasi WA)</p>
+            <h3 class="font-bold text-white text-base mb-2">Jam Layanan Operasional</h3>
+            <div class="text-xs text-slate-400 space-y-1">
+              <p>• Senin - Sabtu: 08:00 - 17:00 WIB</p>
+              <p>• Minggu / Hari Libur: Buka (Konfirmasi WA)</p>
+            </div>
           </div>
-          <a href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20lokasi%20tokonya%20di%20mana%20ya?" target="_blank" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-2 rounded text-center font-semibold hover:bg-gh-border">
-            Hubungi Customer Service via WA
+          <a href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20lokasi%20tokonya%20di%20mana%20ya?" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-blue-400 border border-slate-700 font-bold py-3 rounded-xl text-xs text-center transition">
+            Chat Konsultasi Gratis Sekarang
           </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer class="border-t border-gh-border bg-gh-header py-6 text-center text-xs text-gh-subtext mt-12">
-    <p>© 2026 Nazar Paint. Hak Cipta Dilindungi.</p>
+  <footer class="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+    <p>© 2026 Nazar Paint Studio. Seluruh Hak Cipta Dilindungi.</p>
   </footer>
 
-  <!-- Script Interaktif -->
   <script>
-    // Data Swatch Warna Sesuai Kategori Kualitas
     const colorsData = [
       { name: "Pure White", category: "Standar", hex: "#F8FAFC" },
       { name: "Ivory Cream", category: "Standar", hex: "#FEF08A" },
@@ -333,23 +358,22 @@
     const selectedHex = document.getElementById('selectedHex');
     const orderBtn = document.getElementById('orderBtn');
 
-    // Load Warna ke Swatch Grid
     function renderColors(filter = 'Semua') {
       colorGrid.innerHTML = '';
       const filtered = filter === 'Semua' ? colorsData : colorsData.filter(c => c.category === filter);
       
       filtered.forEach((c) => {
         const card = document.createElement('div');
-        card.className = "p-2 bg-gh-bg border border-gh-border rounded cursor-pointer hover:border-gh-blue transition flex flex-col justify-between space-y-2";
+        card.className = "p-3 bg-slate-900/90 border border-slate-800 rounded-xl cursor-pointer hover:border-blue-500 transition space-y-2";
         card.onclick = () => selectColor(c);
         
         card.innerHTML = `
-          <div class="w-full h-12 rounded border border-gh-border" style="background-color: ${c.hex}"></div>
+          <div class="w-full h-14 rounded-lg border border-slate-700 shadow-sm" style="background-color: ${c.hex}"></div>
           <div>
             <div class="font-bold text-xs text-white truncate">${c.name}</div>
-            <div class="flex items-center justify-between text-[10px] text-gh-subtext mt-0.5">
+            <div class="flex items-center justify-between text-[10px] text-slate-400 mt-0.5">
               <span>${c.category}</span>
-              <span class="font-mono">${c.hex}</span>
+              <span class="font-mono text-slate-300">${c.hex}</span>
             </div>
           </div>
         `;
@@ -369,14 +393,12 @@
       renderColors(cat);
     }
 
-    // Kalkulator Cat
     function calculatePaint() {
       const l = parseFloat(document.getElementById('calcLength').value) || 0;
       const h = parseFloat(document.getElementById('calcHeight').value) || 0;
       const coats = parseInt(document.getElementById('calcCoats').value) || 2;
 
       const area = l * h;
-      // Asumsi 1 kg/liter cat melapisi ~6 m² untuk 1 lapis
       const litersNeeded = ((area / 6) * coats).toFixed(1);
       
       let canSuggestion = "";
@@ -396,7 +418,6 @@
       document.getElementById('resCans').textContent = canSuggestion;
     }
 
-    // Inisialisasi awal
     renderColors();
     calculatePaint();
   </script>
