@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nazar-paint/catalog-official: Katalog Resmi Nazar Paint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gh: {
+              bg: '#0d1117',
+              header: '#161b22',
+              border: '#30363d',
+              text: '#c9d1d9',
+              subtext: '#8b949e',
+              blue: '#58a6ff',
+              green: '#238636',
+              greenHover: '#2ea043',
+              card: '#161b22',
+              hover: '#21262d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #0d1117; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+  </style>
+</head>
+<body class="bg-gh-bg text-gh-text min-h-screen">
+
+  <!-- Header GitHub Top Nav -->
+  <header class="bg-gh-header border-b border-gh-border px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 16 16" version="1.1">
+        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+      </svg>
+      <span class="font-semibold text-white">nazar-paint</span>
+      <span class="text-gh-subtext">/</span>
+      <span class="font-semibold text-gh-blue">catalog-official</span>
+      <span class="text-xs bg-gh-border text-gh-subtext px-2 py-0.5 rounded-full border border-gh-border">Public</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <a href="https://wa.me/6281380842231" target="_blank" class="bg-gh-green hover:bg-gh-greenHover text-white text-xs px-3 py-1.5 rounded-md font-medium flex items-center space-x-1 transition">
+        <span>💬 Order WA</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Repo Navigation Tabs -->
+  <div class="bg-gh-header border-b border-gh-border px-4 pt-2">
+    <div class="flex space-x-6 text-sm">
+      <button class="flex items-center space-x-2 pb-3 border-b-2 border-orange-500 font-semibold text-white">
+        <span>📄 Code</span>
+      </button>
+      <button class="flex items-center space-x-2 pb-3 text-gh-subtext hover:text-gh-text">
+        <span>🎨 Katalog Warna</span>
+      </button>
+      <button class="flex items-center space-x-2 pb-3 text-gh-subtext hover:text-gh-text">
+        <span>⭐ Kategori Produk</span>
+      </button>
+      <button class="flex items-center space-x-2 pb-3 text-gh-subtext hover:text-gh-text">
+        <span>📍 Lokasi Toko</span>
+      </button>
+    </div>
+  </div>
+
+  <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+
+    <!-- Hero / Main Banner -->
+    <div class="border border-gh-border bg-gh-card rounded-md p-6 relative overflow-hidden">
+      <div class="max-w-2xl">
+        <h1 class="text-3xl font-bold text-white mb-2">🎨 Nazar Paint Official Catalog</h1>
+        <p class="text-gh-subtext mb-4">
+          Penyedia cat berkualitas tinggi untuk segala kebutuhan interior & eksterior. Tersedia dalam varian <strong>Standar</strong>, <strong>Super</strong>, <strong>Pro</strong>, dan <strong>Multi Gloss</strong>.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20tanya%20produk%20cat" target="_blank" class="bg-gh-green hover:bg-gh-greenHover text-white px-4 py-2 rounded-md font-semibold text-sm flex items-center space-x-2">
+            <span>📲 Konsultasi & Pemesanan WA (+62 813-8084-2231)</span>
+          </a>
+          <a href="https://maps.app.goo.gl/XqgvTJuzGKFaVB6YA" target="_blank" class="bg-gh-hover hover:bg-gh-border text-gh-blue border border-gh-border px-4 py-2 rounded-md font-semibold text-sm flex items-center space-x-2">
+            <span>📍 Petunjuk Arah Toko (Google Maps)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategori Kualitas Cat -->
+    <section>
+      <h2 class="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
+        <span>🏷️ Kategori Kualitas Cat</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Standar -->
+        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-bold text-white text-lg">Cat Standar</h3>
+            <span class="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded border border-gray-700">Ekonomis</span>
+          </div>
+          <p class="text-gh-subtext text-xs mb-3">Cat dinding pilihan tepat untuk kebutuhan pelapisan harian dengan harga terjangkau dan daya tutup baik.</p>
+          <ul class="text-xs text-gh-text space-y-1 mb-4">
+            <li>✓ Cocok untuk tembok interior</li>
+            <li>✓ Aplikasi mudah & cepat kering</li>
+            <li>✓ Pilihan warna beragam</li>
+          </ul>
+          <button onclick="filterColor('Standar')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Standar</button>
+        </div>
+
+        <!-- Super -->
+        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-bold text-white text-lg">Cat Super</h3>
+            <span class="text-xs bg-blue-950 text-blue-300 px-2 py-0.5 rounded border border-blue-800">Perlindungan Plus</span>
+          </div>
+          <p class="text-gh-subtext text-xs mb-3">Formulasi ditingkatkan dengan ketahanan ekstra, anti-jamur, dan warna yang lebih tahan lama.</p>
+          <ul class="text-xs text-gh-text space-y-1 mb-4">
+            <li>✓ Daya rekat & tutup tinggi</li>
+            <li>✓ Formula anti-jamur & lumut</li>
+            <li>✓ Warna cerah & tidak mudah pudar</li>
+          </ul>
+          <button onclick="filterColor('Super')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Super</button>
+        </div>
+
+        <!-- Pro -->
+        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-bold text-white text-lg">Cat Pro</h3>
+            <span class="text-xs bg-purple-950 text-purple-300 px-2 py-0.5 rounded border border-purple-800">Profesional</span>
+          </div>
+          <p class="text-gh-subtext text-xs mb-3">Kualitas spesifikasi profesional untuk hasil akhir paling halus, pekat, dan ketahanan jangka panjang.</p>
+          <ul class="text-xs text-gh-text space-y-1 mb-4">
+            <li>✓ Hasil akhir super halus & merata</li>
+            <li>✓ Bisa disikat / mudah dibersihkan</li>
+            <li>✓ Cocok untuk eksterior & interior</li>
+          </ul>
+          <button onclick="filterColor('Pro')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Pro</button>
+        </div>
+
+        <!-- Multi Gloss -->
+        <div class="border border-gh-border bg-gh-card p-4 rounded-md hover:border-gh-subtext transition">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-bold text-white text-lg">Multi Gloss</h3>
+            <span class="text-xs bg-amber-950 text-amber-300 px-2 py-0.5 rounded border border-amber-800">Mengkilap & Serbaguna</span>
+          </div>
+          <p class="text-gh-subtext text-xs mb-3">Cat serbaguna dengan hasil akhir kilap (glossy), tahan air, licin, dan sangat mudah dilap jika kotor.</p>
+          <ul class="text-xs text-gh-text space-y-1 mb-4">
+            <li>✓ Hasil kilap & tahan air (waterproof)</li>
+            <li>✓ Serbaguna untuk tembok, lis, dll.</li>
+            <li>✓ Permukaan licin, noda mudah dilap</li>
+          </ul>
+          <button onclick="filterColor('Multi Gloss')" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-1.5 rounded text-xs font-semibold hover:bg-gh-border">Lihat Warna Multi Gloss</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Katalog Warna & Visualizer Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Kolom Swatch Warna -->
+      <div class="lg:col-span-2 border border-gh-border bg-gh-card rounded-md p-4 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gh-border pb-3">
+          <h2 class="text-lg font-semibold text-white">🎨 Katalog Swatch Warna</h2>
+          <div class="flex items-center space-x-1 text-xs">
+            <button onclick="filterColor('Semua')" class="px-2.5 py-1 rounded bg-gh-border text-white">Semua</button>
+            <button onclick="filterColor('Standar')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Standar</button>
+            <button onclick="filterColor('Super')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Super</button>
+            <button onclick="filterColor('Pro')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Pro</button>
+            <button onclick="filterColor('Multi Gloss')" class="px-2.5 py-1 rounded bg-gh-hover text-gh-subtext hover:text-white">Multi Gloss</button>
+          </div>
+        </div>
+
+        <div id="colorGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-96 overflow-y-auto custom-scrollbar pr-1">
+          <!-- Item Swatch Warna (Dapat diklik) -->
+        </div>
+      </div>
+
+      <!-- Kolom Interactive Room Visualizer -->
+      <div class="border border-gh-border bg-gh-card rounded-md p-4 flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-semibold text-white mb-2">👁️ Visualizer Ruangan</h2>
+          <p class="text-xs text-gh-subtext mb-4">Klik salah satu swatch warna di samping untuk menguji langsung warnanya pada dinding ruangan.</p>
+
+          <!-- Previsu Dinding Room (SVG) -->
+          <div class="relative w-full h-48 rounded-md overflow-hidden border border-gh-border flex items-center justify-center bg-gray-950">
+            <svg class="w-full h-full" viewBox="0 0 300 200" fill="none">
+              <!-- Dinding belakang (Warna yang disimulasikan) -->
+              <rect id="wallPreview" x="30" y="20" width="240" height="130" fill="#E2E8F0" class="transition-colors duration-300" />
+              <!-- Lantai -->
+              <polygon points="0,200 30,150 270,150 300,200" fill="#332922" />
+              <!-- Garis Sudut Ruangan -->
+              <line x1="0" y1="0" x2="30" y2="20" stroke="#000000" stroke-opacity="0.3" stroke-width="2"/>
+              <line x1="300" y1="0" x2="270" y2="20" stroke="#000000" stroke-opacity="0.3" stroke-width="2"/>
+              <line x1="30" y1="20" x2="30" y2="150" stroke="#000000" stroke-opacity="0.2" stroke-width="2"/>
+              <line x1="270" y1="20" x2="270" y2="150" stroke="#000000" stroke-opacity="0.2" stroke-width="2"/>
+              <line x1="30" y1="150" x2="270" y2="150" stroke="#000000" stroke-opacity="0.4" stroke-width="2"/>
+              <!-- Pigura Foto / Dekorasi -->
+              <rect x="110" y="45" width="80" height="50" fill="#1E293B" rx="2" stroke="#FFFFFF" stroke-width="2"/>
+              <circle cx="150" cy="70" r="12" fill="#38BDF8"/>
+              <!-- Sofa sederhana -->
+              <rect x="80" y="125" width="140" height="30" rx="4" fill="#475569" />
+              <rect x="75" y="120" width="20" height="35" rx="3" fill="#334155" />
+              <rect x="205" y="120" width="20" height="35" rx="3" fill="#334155" />
+            </svg>
+          </div>
+
+          <div class="mt-4 p-3 bg-gh-bg border border-gh-border rounded text-xs space-y-1">
+            <div class="text-gh-subtext">Warna Terpilih:</div>
+            <div id="selectedColorName" class="font-bold text-white text-sm">Pure White</div>
+            <div class="flex items-center justify-between text-gh-subtext">
+              <span>Kategori: <strong id="selectedCategory" class="text-gh-blue">Standar</strong></span>
+              <span id="selectedHex" class="font-mono bg-gh-border px-1.5 py-0.5 rounded text-white">#F8FAFC</span>
+            </div>
+          </div>
+        </div>
+
+        <a id="orderBtn" href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20pesan%20warna%20Pure%20White" target="_blank" class="w-full mt-4 bg-gh-green hover:bg-gh-greenHover text-white py-2 rounded font-semibold text-xs text-center block transition">
+          Pesan Warna Ini via WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Kalkulator Cat -->
+    <section class="border border-gh-border bg-gh-card rounded-md p-5">
+      <h2 class="text-lg font-semibold text-white mb-2">🧮 Kalkulator Kebutuhan Cat</h2>
+      <p class="text-xs text-gh-subtext mb-4">Hitung estimasi kebutuhan kaleng/pail cat berdasarkan ukuran dinding ruangan Anda.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4 text-xs">
+        <div>
+          <label class="block text-gh-subtext mb-1">Panjang Total Dinding (m)</label>
+          <input type="number" id="calcLength" value="10" min="1" oninput="calculatePaint()" class="w-full bg-gh-bg border border-gh-border rounded p-2 text-white font-mono focus:outline-none focus:border-gh-blue">
+        </div>
+        <div>
+          <label class="block text-gh-subtext mb-1">Tinggi Tembok (m)</label>
+          <input type="number" id="calcHeight" value="3" min="1" oninput="calculatePaint()" class="w-full bg-gh-bg border border-gh-border rounded p-2 text-white font-mono focus:outline-none focus:border-gh-blue">
+        </div>
+        <div>
+          <label class="block text-gh-subtext mb-1">Jumlah Lapis Cat</label>
+          <select id="calcCoats" onchange="calculatePaint()" class="w-full bg-gh-bg border border-gh-border rounded p-2 text-white focus:outline-none focus:border-gh-blue">
+            <option value="2" selected>2 Lapis (Disarankan)</option>
+            <option value="1">1 Lapis</option>
+            <option value="3">3 Lapis</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="p-4 bg-gh-bg border border-gh-border rounded flex flex-col sm:flex-row items-center justify-between text-xs space-y-2 sm:space-y-0">
+        <div>
+          <span class="text-gh-subtext">Luas Dinding: </span>
+          <strong id="resArea" class="text-white font-mono text-sm">30.0 m²</strong>
+        </div>
+        <div>
+          <span class="text-gh-subtext">Estimasi Cat Dibutuhkan: </span>
+          <strong id="resLiters" class="text-gh-blue font-mono text-sm">~5.0 Kg / Liter</strong>
+        </div>
+        <div>
+          <span class="text-gh-subtext">Perkiraan Kemasan: </span>
+          <strong id="resCans" class="text-white font-mono text-sm">2 Galon (2.5 Kg) / 1 Pail</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Informasi Lokasi Toko & Kontak -->
+    <section class="border border-gh-border bg-gh-card rounded-md p-5 space-y-4">
+      <h2 class="text-lg font-semibold text-white">📍 Lokasi Toko & Kontak Resmi</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+        <div class="space-y-2 bg-gh-bg p-4 rounded border border-gh-border">
+          <h3 class="font-bold text-white text-sm">Toko Nazar Paint</h3>
+          <p class="text-gh-subtext">Siap melayani pembelian eceran & partai besar, konsultasi racikan warna, dan kebutuhan renovasi rumah Anda.</p>
+          <div class="text-gh-text space-y-1">
+            <p><strong>📞 WA / Telepon:</strong> <a href="https://wa.me/6281380842231" target="_blank" class="text-gh-blue hover:underline">+62 813-8084-2231</a></p>
+            <p><strong>🗺️ Google Maps:</strong> <a href="https://maps.app.goo.gl/XqgvTJuzGKFaVB6YA" target="_blank" class="text-gh-blue hover:underline">Lihat Petunjuk Arah Toko</a></p>
+          </div>
+        </div>
+
+        <div class="bg-gh-bg p-4 rounded border border-gh-border flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-white text-sm mb-1">Jam Operasional Toko</h3>
+            <p class="text-gh-subtext">Senin - Sabtu: 08:00 - 17:00 WIB</p>
+            <p class="text-gh-subtext">Minggu / Hari Libur: Buka (Konfirmasi WA)</p>
+          </div>
+          <a href="https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20lokasi%20tokonya%20di%20mana%20ya?" target="_blank" class="w-full bg-gh-hover text-gh-blue border border-gh-border py-2 rounded text-center font-semibold hover:bg-gh-border">
+            Hubungi Customer Service via WA
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-gh-border bg-gh-header py-6 text-center text-xs text-gh-subtext mt-12">
+    <p>© 2026 Nazar Paint. Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <!-- Script Interaktif -->
+  <script>
+    // Data Swatch Warna Sesuai Kategori Kualitas
+    const colorsData = [
+      { name: "Pure White", category: "Standar", hex: "#F8FAFC" },
+      { name: "Ivory Cream", category: "Standar", hex: "#FEF08A" },
+      { name: "Soft Grey", category: "Standar", hex: "#CBD5E1" },
+      { name: "Sky Pastel", category: "Standar", hex: "#BAE6FD" },
+
+      { name: "Super Shield White", category: "Super", hex: "#FFFFFF" },
+      { name: "Ocean Blue Super", category: "Super", hex: "#0284C7" },
+      { name: "Fresh Mint Super", category: "Super", hex: "#4ADE80" },
+      { name: "Terracotta Super", category: "Super", hex: "#EA580C" },
+
+      { name: "Pro Matte White", category: "Pro", hex: "#F1F5F9" },
+      { name: "Pro Deep Charcoal", category: "Pro", hex: "#334155" },
+      { name: "Pro Elegant Beige", category: "Pro", hex: "#E2E8F0" },
+      { name: "Pro Sage Green", category: "Pro", hex: "#15803D" },
+
+      { name: "Gloss Brilliant White", category: "Multi Gloss", hex: "#FFFFFF" },
+      { name: "Gloss Jet Black", category: "Multi Gloss", hex: "#0F172A" },
+      { name: "Gloss Sunny Yellow", category: "Multi Gloss", hex: "#EAB308" },
+      { name: "Gloss Royal Red", category: "Multi Gloss", hex: "#DC2626" }
+    ];
+
+    const colorGrid = document.getElementById('colorGrid');
+    const wallPreview = document.getElementById('wallPreview');
+    const selectedColorName = document.getElementById('selectedColorName');
+    const selectedCategory = document.getElementById('selectedCategory');
+    const selectedHex = document.getElementById('selectedHex');
+    const orderBtn = document.getElementById('orderBtn');
+
+    // Load Warna ke Swatch Grid
+    function renderColors(filter = 'Semua') {
+      colorGrid.innerHTML = '';
+      const filtered = filter === 'Semua' ? colorsData : colorsData.filter(c => c.category === filter);
+      
+      filtered.forEach((c) => {
+        const card = document.createElement('div');
+        card.className = "p-2 bg-gh-bg border border-gh-border rounded cursor-pointer hover:border-gh-blue transition flex flex-col justify-between space-y-2";
+        card.onclick = () => selectColor(c);
+        
+        card.innerHTML = `
+          <div class="w-full h-12 rounded border border-gh-border" style="background-color: ${c.hex}"></div>
+          <div>
+            <div class="font-bold text-xs text-white truncate">${c.name}</div>
+            <div class="flex items-center justify-between text-[10px] text-gh-subtext mt-0.5">
+              <span>${c.category}</span>
+              <span class="font-mono">${c.hex}</span>
+            </div>
+          </div>
+        `;
+        colorGrid.appendChild(card);
+      });
+    }
+
+    function selectColor(c) {
+      wallPreview.setAttribute('fill', c.hex);
+      selectedColorName.textContent = c.name;
+      selectedCategory.textContent = c.category;
+      selectedHex.textContent = c.hex;
+      orderBtn.href = `https://wa.me/6281380842231?text=Halo%20Nazar%20Paint,%20saya%20ingin%20pesan%20cat%20kategori%20${encodeURIComponent(c.category)}%20warna%20${encodeURIComponent(c.name)}%20(${encodeURIComponent(c.hex)})`;
+    }
+
+    function filterColor(cat) {
+      renderColors(cat);
+    }
+
+    // Kalkulator Cat
+    function calculatePaint() {
+      const l = parseFloat(document.getElementById('calcLength').value) || 0;
+      const h = parseFloat(document.getElementById('calcHeight').value) || 0;
+      const coats = parseInt(document.getElementById('calcCoats').value) || 2;
+
+      const area = l * h;
+      // Asumsi 1 kg/liter cat melapisi ~6 m² untuk 1 lapis
+      const litersNeeded = ((area / 6) * coats).toFixed(1);
+      
+      let canSuggestion = "";
+      if (litersNeeded <= 2.5) {
+        canSuggestion = "1 Galon (2.5 Kg)";
+      } else if (litersNeeded <= 5) {
+        canSuggestion = "2 Galon (2.5 Kg)";
+      } else if (litersNeeded <= 20) {
+        canSuggestion = "1 Pail Besar (20 Kg)";
+      } else {
+        const pails = Math.ceil(litersNeeded / 20);
+        canSuggestion = `${pails} Pail Besar (20 Kg)`;
+      }
+
+      document.getElementById('resArea').textContent = area.toFixed(1) + " m²";
+      document.getElementById('resLiters').textContent = `~${litersNeeded} Kg / Liter`;
+      document.getElementById('resCans').textContent = canSuggestion;
+    }
+
+    // Inisialisasi awal
+    renderColors();
+    calculatePaint();
+  </script>
+</body>
+</html>
